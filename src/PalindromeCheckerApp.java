@@ -1,17 +1,14 @@
 public class PalindromeCheckerApp {
     public static void main(String[] args){
-        String input = "madam";
-        boolean flag = true;
-        for(int i=0;i<input.length()/2;i++){
-            if(input.charAt(i)!=input.charAt(input.length()-1-i)){
-                flag = false;
-                break;
-            }
+        String str1 = "madam";
+        String str2 = "";
+        for(int i = str1.length()-1;i>=0;i--){
+            char ch = str1.charAt(i);
+            str2 = str2 + ch;
         }
-        System.out.println("Input text: "+input);
-        if(flag)
-            System.out.println("Is it a Palindrome? : "+flag);
+        if(str1.equals(str2))
+            System.out.println("Palindrome");
         else
-            System.out.println("Is it a Palindrome? : "+flag);
+            System.out.println("Not a palindrome");
     }
 }
